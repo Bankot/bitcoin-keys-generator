@@ -1,0 +1,104 @@
+$main-bg-color: rgb(14, 7, 13);
+$main-font: 'montserrat';
+$header-fontsize: 50px;
+$big-mobile-breakpoint: 1060px;
+$small-mobile-breakpoint: 505px;
+
+body {
+    background-color: $main-bg-color;
+}
+
+.wrapper {
+    margin-top: 200px;
+    font-family: $main-font;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &__coin-svg {
+            width: 150px;
+            height: auto;
+        }
+
+        &__h1 {
+            font-size: $header-fontsize;
+            color: white;
+            margin: 10px;
+        }
+
+        &__button {
+            font-family: $main-font;
+            width: 120px;
+            height: 40px;
+            background-color: transparent;
+            border: solid 3px white;
+            border-radius: 20px;
+            color: white;
+            outline: none;
+            cursor: pointer;
+            transition: all ease-out .2s;
+
+            &:hover {
+                background-color: white;
+                color: $main-bg-color;
+                transition: ease-in all .3s;
+            }
+
+            &:active {
+                filter: brightness(80%);
+            }
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        width: 80%;
+
+        &__key {
+            border: solid 1px white;
+            margin: 15px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+
+            &__label {
+                color: white;
+                margin: 10px;
+            }
+
+            &__value {
+                color: wheat;
+                margin: 10px;
+                font-size: 15px;
+                text-align: left;
+                overflow-wrap: break-word;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $big-mobile-breakpoint) {
+    .wrapper {
+        &__header {}
+
+        &__content {
+            display: grid;
+            grid-template-columns: 100%;
+        }
+    }
+}

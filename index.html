@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="styles.css" rel="stylesheet">
+    <title>Bitcoin Keys Generator!</title>
+</head>
+
+<body>
+    <section class='wrapper'>
+        <header class="wrapper__header">
+            <img class="wrapper__header__coin-svg" src="coin.svg" alt="bitcoin logo"></img>
+            <h1 class="wrapper__header__h1">Generate Your Own Bitcoin Key!</h1>
+            <button id="button" class="wrapper__header__button">Click Me!</button>
+        </header>
+        <div class="wrapper__content">
+            <div class="wrapper__content__key">
+                <p class="wrapper__content__key__label">Public Key</p>
+                <p id="publicKey" class="wrapper__content__key__value"></p>
+            </div>
+            <div class="wrapper__content__key">
+                <p class="wrapper__content__key__label">Private Key</p>
+                <p id="privateKey" class="wrapper__content__key__value"></p>
+            </div>
+            <div class="wrapper__content__key">
+                <p class="wrapper__content__key__label">Public Adress</p>
+                <p id="adress" class="wrapper__content__key__value"></p>
+            </div>
+            <div class="wrapper__content__key">
+                <p class="wrapper__content__key__label">Private Key WIF</p>
+                <p id="privateWIF" class="wrapper__content__key__value"></p>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="bundle.js"></script>
+</body>
+
+</html>
